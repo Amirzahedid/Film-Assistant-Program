@@ -45,12 +45,24 @@ Ensure you have the following installed:
      OMDB_API_KEY=your_omdb_api_key
      ```
 
-4. Run the application:
+4. Configure the model:
+   - Download the LLaMA 2 model from an official source (e.g., Meta AI).
+   - Save the model file in a local directory (e.g., `C:\Personal\llama-2-7b-chat.Q2_K.gguf`).
+   - Update the model path in `backend.py`:
+     ```python
+     model_name = "path/to/your/llama-2-model.Q2_K.gguf"
+     ```
+   - Alternatively, use the `.env` file to store the path:
+     ```env
+     MODEL_PATH=path/to/your/llama-2-model.Q2_K.gguf
+     ```
+
+5. Run the application:
    ```bash
    streamlit run app.py
    ```
 
-5. Access the app in your browser at `http://localhost:8501`.
+6. Access the app in your browser at `http://localhost:8501`.
 
 ## File Structure
 ```
@@ -113,5 +125,5 @@ film-assistant/
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
-For questions or suggestions, please contact [Your Name] at [your_email@example.com].
+For questions or suggestions, please contact Amir Zahedidarehshoori at amirzahedi01@gmail.com.
 
